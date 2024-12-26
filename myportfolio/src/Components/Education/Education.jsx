@@ -36,7 +36,7 @@ const Education = () => {
               <p className='text-gray-500'>2017-2018</p>
             </div>
             <div className=' flex flex-col mt-8'>
-              <h1 className='text-xl text-[#5eead4] font-bold'> 94.6 % </h1>
+              <h1 className='text-xl text-[#5eead4] font-bold'> 94.2 % </h1>
             </div>
           </div>
           </div>
