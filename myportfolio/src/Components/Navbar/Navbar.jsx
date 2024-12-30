@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       
       {isDropDownVisible && (
-        <div className="mob-nav grid grid-cols-1 absolute top-4 right-11 bg-transparent lg:hidden">
+        <div className="mob-nav grid grid-cols-1 absolute bg-gray-900 lg:hidden">
           <motion.a href="#home" className="navs">Home</motion.a>
           <motion.a href="#about" className="navs">About</motion.a>
           <motion.a href="#skills" className="navs">Skills</motion.a>

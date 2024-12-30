@@ -83,8 +83,8 @@
 		--burger-menu-radius: 3em;
 		display: block;
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		top: 1.5rem;
+		right: 0.5rem;
 		z-index: 1000;
 		width: var(--burger-menu-radius);
 		height: var(--burger-menu-radius);
@@ -146,12 +146,12 @@
 		font-family: "DM Sans", sans-serif;
 		font-weight: 500;
 		position: fixed;
-		top: 4rem;
-		right: 1rem;
+		top: 5rem;
+		right: 2rem;
 		/* left: 1rem; */
 		margin: 0 auto;
 		height: auto;
-		width: auto;
+		width: 40%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

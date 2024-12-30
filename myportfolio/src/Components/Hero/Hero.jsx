@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="flex flex-col justify-center items-center ">
                     <div className="text-5xl font-bold text-white">Hi, I'm<span className="text-[#5eead4]"> Sakthi</span></div>
                     {/* <img src={Hi} width={24} height={24}/> */}
-                    <div className="text-2xl text-white mt-4">Full Stack Developer</div>
+                    <div className="text-2xl text-white mt-4">Front-end Developer</div>
                     
                     <div className='mt-4 flex justify-center items-center gap-4'>
                         <BiLogoGmail className="text-4xl text-[#5eead4] cursor-pointer" />
