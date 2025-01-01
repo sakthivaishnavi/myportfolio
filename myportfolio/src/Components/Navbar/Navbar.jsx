@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <div id="navbar" className="flex items-center justify-center pt-3 mt-4">
-      <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer bg">
+      <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
         <motion.a href="#home" className="link" whileHover={hoverEffect}>Home</motion.a>
         <motion.a href="#about" className="link" whileHover={hoverEffect}>About</motion.a>
         <motion.a href="#skills" className="link" whileHover={hoverEffect}>Skills</motion.a>

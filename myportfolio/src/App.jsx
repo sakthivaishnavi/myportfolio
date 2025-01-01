@@ -9,6 +9,7 @@ import Achievements from "./Components/Achievements/Achievements";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import { LightSpeed } from "react-swift-reveal";
+import { Pulse } from "react-swift-reveal";
 import { useInView } from 'react-intersection-observer';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Navbar />
         <Hero />
         <div ref={ref}>
-          <LightSpeed key={inView ? 'inView' : 'notInView'} left={true} duration={2000}>
+          <LightSpeed key={inView ? 'inView' : 'notInView'} left={true} duration={2500}>
             <About />
           </LightSpeed>
         </div>
@@ -28,7 +29,11 @@ function App() {
         <Skills />
         <Projects />
         <Achievements />
+        <div ref={ref}>
+        <Pulse key={inView ? 'inView' : 'notInView'} left={true} duration={1000}>
         <Contact />
+        </Pulse>
+        </div>
         <Footer />
       </div>
     </>

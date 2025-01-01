@@ -5,6 +5,9 @@ import { DiNodejs } from "react-icons/di";
 import { FaPython, FaJava } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaC } from "react-icons/fa6";
+import { Fade } from 'react-swift-reveal';
+import { useInView } from 'react-intersection-observer';
+
 
 const skillStyles = ' hover:bg-[#5eead4] bg-gray-900 text-[#5eead4]  hover:text-black p-4 rounded-xl scale-110 hover:scale-125 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
 
@@ -23,12 +26,18 @@ const skills = [
 ];
 
 const Skills = () => {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   return (
     <div>
       <div className='flex justify-center mt-16 mb-20'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
+      <div ref={ref}>
+      <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
       <h1 className='text-4xl mb-16 text-center'>My Skillsets</h1>
+      </Fade></div>
+      <div ref={ref}>
+      <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500}>
       <div className='flex flex-col items-center'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-14'>
           {skills.map((skill, index) => (
@@ -39,6 +48,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
+      </Fade></div>
       <div className='flex justify-center mt-20 mb-20'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
