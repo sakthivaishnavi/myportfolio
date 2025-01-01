@@ -1,5 +1,5 @@
 import Hi from '../../assets/Hi.gif';
-import profile from '../../assets/me.jpg';
+import profile from '../../assets/edited.webp';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -15,15 +15,19 @@ const Hero = () => {
                     <div className="text-2xl text-white mt-4">Front-end Developer</div>
                     
                     <div className='mt-4 flex justify-center items-center gap-4'>
-                        <BiLogoGmail className="text-4xl text-[#5eead4] cursor-pointer" />
-                        <FaLinkedin className="text-[#5eead4] text-4xl cursor-pointer" />
-                        <FaGithub className="text-[#5eead4] text-4xl  cursor-pointer" />
-                        <SiLeetcode  className="text-[#5eead4] text-4xl cursor-pointer"/>
+                        <a href='mailto:sakthivaishnavi12@gmail.com'>
+                        <BiLogoGmail className="text-4xl text-[#5eead4] cursor-pointer" /></a>
+                        <a href='https://www.linkedin.com/in/sakthivaishnavi/'>
+                        <FaLinkedin className="text-[#5eead4] text-4xl cursor-pointer" /></a>
+                        <a href='https://github.com/sakthivaishnavi'>
+                        <FaGithub className="text-[#5eead4] text-4xl  cursor-pointer" /></a>
+                        <a href='https://leetcode.com/sakthivaishnavi/'>
+                        <SiLeetcode  className="text-[#5eead4] text-4xl cursor-pointer"/></a>
                     </div>
 
                     <div>
                         {/* <button className=" border border-[#ffffff] text-white font-bold py-2 px-4 rounded-full mt-4">Contact Me</button> */}
-                        <button className="border border-[#ffffff] text-white font-bold py-2 px-4 rounded-full mt-4 ml-4">Resume</button>
+                        <button className="border border-[#5eead4] bg-gray-900 text-[#5eead4] font-bold py-2 px-4 rounded-full mt-4 ml-4 hover:bg-[#5eead4] hover:text-black">Resume</button>
                     </div>
 
                 </div>

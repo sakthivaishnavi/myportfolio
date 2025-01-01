@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <div>
-    <div className='container mx-auto px-4 py-4 text-white ml-6'>
+    <div className='container mx-auto text-white'>
           <Navbar />
           <Hero />
           <About />
