@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./navbar.css";
+import { Fade } from 'react-swift-reveal';
+import { useInView } from 'react-intersection-observer';
 
 const Navbar = () => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
@@ -14,9 +16,13 @@ const Navbar = () => {
     color: "aqua",
     transition: { duration: 0.3 },
   };
+    const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+  
 
   return (
     <div id="navbar" className="flex items-center justify-center pt-3 mt-4">
+       <div ref={ref}>
+        <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
       <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
         <motion.a href="#home" className="link" whileHover={hoverEffect}>Home</motion.a>
         <motion.a href="#about" className="link" whileHover={hoverEffect}>About</motion.a>
@@ -25,6 +31,9 @@ const Navbar = () => {
         <motion.a href="#achievements" className="link" whileHover={hoverEffect}>Accomplishments</motion.a>
         <motion.a href="#contact" className="link" whileHover={hoverEffect}>Contact</motion.a>
       </div>
+      </Fade>
+      </div>
+
       <div className="lg:hidden">
       <input type="checkbox" onClick={handleDropDown} id="burger-toggle" className={`${isDropDownVisible ? "hidden" : "visible mt-3"}`}/>
       <label htmlFor="burger-toggle" className="burger-menu">
