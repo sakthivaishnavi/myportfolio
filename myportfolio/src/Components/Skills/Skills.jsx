@@ -4,25 +4,26 @@ import { SiHtml5, SiMongodb, SiMysql } from "react-icons/si";
 import { DiNodejs } from "react-icons/di";
 import { FaPython, FaJava } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
+import { IoLogoFigma } from "react-icons/io5";
 import { FaC } from "react-icons/fa6";
 import { Fade } from 'react-swift-reveal';
 import { useInView } from 'react-intersection-observer';
 
-
-const skillStyles = ' hover:bg-[#5eead4] bg-gray-900 text-[#5eead4]  hover:text-black p-4 rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
+const skillStyles = ' hover:bg-[#5eead4] bg-gray-900 text-[#5eead4]  hover:text-gray-900 p-4 rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
 
 const skills = [
-  { icon: <SiHtml5 />, name: 'HTML5' },
-  { icon: <RiJavascriptFill />, name: 'JavaScript' },
   { icon: <RiReactjsFill />, name: 'React' },
-  { icon: <TbBrandReactNative />, name: 'React Native' },
   { icon: <RiTailwindCssFill />, name: 'Tailwind CSS' },
   { icon: <DiNodejs />, name: 'Node.js' },
   { icon: <SiMongodb />, name: 'MongoDB' },
+  { icon: <SiHtml5 />, name: 'HTML5' },
+  { icon: <RiJavascriptFill />, name: 'JavaScript' },
+  { icon: <TbBrandReactNative />, name: 'React Native' },
   { icon: <SiMysql />, name: 'MySQL' },
+  { icon: <FaJava />, name: 'Java' },
   { icon: <FaC />, name: 'C' },
   { icon: <FaPython />, name: 'Python' },
-  { icon: <FaJava />, name: 'Java' },
+  { icon: <IoLogoFigma />, name: 'Figma' },
 ];
 
 const Skills = () => {
