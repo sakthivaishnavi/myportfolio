@@ -9,7 +9,7 @@ import Achievements from "./Components/Achievements/Achievements";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import { LightSpeed } from "react-swift-reveal";
-import { Pulse } from "react-swift-reveal";
+import { Fade } from "react-swift-reveal";
 import { useInView } from 'react-intersection-observer';
 
 function App() {
@@ -30,9 +30,9 @@ function App() {
         <Projects />
         <Achievements />
         <div ref={ref}>
-        <Pulse key={inView ? 'inView' : 'notInView'} left={true} duration={1000}>
+        <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1000}>
         <Contact />
-        </Pulse>
+        </Fade>
         </div>
         <Footer />
       </div>

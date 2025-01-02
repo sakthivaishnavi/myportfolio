@@ -16,7 +16,7 @@ const Education = () => {
         <div className="max-w-3xl text-lg">
           {/* College Education */}
           <div ref={ref} className="hover:scale-110 transition-transform duration-500 ease-in-out delay-100">
-          <Pulse key={inView ? 'inView' : 'notInView'} duration={1500}>
+          <Pulse key={inView ? 'inView' : 'notInView'} duration={1000} top={true}>
           <div className="flex justify-between gap-8 bg-gray-900 p-10 rounded-xl mb-8 w-full">
             <div className="flex flex-col items-start">
               <h1 className="text-xl font-bold">Kongu Engineering College</h1>
