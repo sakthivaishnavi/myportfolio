@@ -12,7 +12,8 @@ const Contact = () => {
           <IoIosMail />
           </div>
           <div>
-            <a href="mailto:sakthivaishnavi12@gmail.com">sakthivaishnavi12@gmail.com</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sakthivaishnavi12@gmail.com"
+          target="_blank">sakthivaishnavi12@gmail.com</a>
           </div>
           </div>
 
