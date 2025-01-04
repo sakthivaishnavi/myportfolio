@@ -1,5 +1,5 @@
 import Hi from '../../assets/Hi.gif';
-import profile from '../../assets/edited.webp';
+import profile from '../../assets/cropped.jpg';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -40,7 +40,7 @@ const Hero = () => {
 
                 <div>
           <div ref={ref}>
-            <Slide key={inView ? 'inView' : 'notInView'} left={true} duration={1000} distance={'50px'}>
+            <Slide key={inView ? 'inView' : 'notInView'} bottom={true} duration={1000} distance={'100px'}>
                   <button className="border border-[#5eead4] bg-gray-900 text-[#5eead4] font-bold py-2 px-4 rounded-full mt-4 hover:bg-[#5eead4] hover:text-black">Resume</button>
             </Slide>
                 </div>

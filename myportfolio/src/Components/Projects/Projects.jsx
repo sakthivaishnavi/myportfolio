@@ -19,7 +19,7 @@ const Projects = () => {
       <div ref={ref}>
         <Slide key={inView ? 'inView' : 'notInView'} left={true} duration={2500} distance={'100px'}>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ml-20 mr-20 mt-16'>
-            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] p-5 rounded-3xl hover:scale-105 transition-all duration-300 ease-in-out'>
+            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>
               <h1 className='text-center text-xl font-bold mt-2'>Picky - The Recipe Finder App</h1>
               <p className='mt-4 text-wrap text-justify'>
                 Recipe Finder is a user-friendly web app designed for food lovers to explore,
@@ -57,7 +57,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] p-5 rounded-3xl hover:scale-105 transition-all duration-300 ease-in-out'>
+            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>
               <h1 className='text-center text-xl font-bold mt-2'>KEC Food Court App</h1>
               <p className='mt-4 text-wrap text-justify'>
                 KEC Food Court is a smart food ordering platform tailored for students to avoid long canteen queues,
@@ -92,7 +92,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] p-5 rounded-3xl hover:scale-105 transition-all duration-300 ease-in-out'>
+            <div className='text-wrap bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>
               <h1 className='text-center text-xl font-bold mt-2'>Vehicle Monitoring App</h1>
               <p className='mt-4 text-wrap text-justify'>
                 The Vehicle Monitoring App is a mobile application designed to track and analyze vehicle performance.
@@ -132,7 +132,7 @@ const Projects = () => {
         <Slide key={inView ? 'inView' : 'notInView'} right={true} duration={2500} distance={'100px'}>
           <div className="flex justify-center items-center">
             <div className='flex justify-center items-center ml-72 mr-72 mt-8 gap-8 '>
-              <div className='text-wrap w-3/4 bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] p-5 rounded-3xl hover:scale-105 transition-all duration-300 ease-in-out'>
+              <div className='text-wrap w-3/4 bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>
                 <h1 className='text-center text-xl font-bold mt-2'>Portfolio Website</h1>
                 <p className='mt-4 text-wrap text-justify'>
                   My portfolio website is a showcase of my skills, projects, and achievements.
@@ -163,7 +163,7 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className='text-wrap w-3/4 bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] p-5 rounded-3xl hover:scale-105 transition-all duration-300 ease-in-out'>
+              <div className='text-wrap w-3/4 bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>
                 <h1 className='text-center text-xl font-bold mt-2'>Anonymous Messaging App</h1>
                 <p className='mt-4 text-wrap text-justify'>
                   The Anonymous Messaging App enables users to send anonymous messages to an admin by submitting text and
