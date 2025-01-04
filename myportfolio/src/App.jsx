@@ -8,9 +8,9 @@ import Projects from "./Components/Projects/Projects";
 import Achievements from "./Components/Achievements/Achievements";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
-import { LightSpeed } from "react-swift-reveal";
 import { Fade } from "react-swift-reveal";
 import { useInView } from 'react-intersection-observer';
+import Certifications from "./Components/Certifications/Certifications";
 
 function App() {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
@@ -20,14 +20,13 @@ function App() {
       <div className='container mx-auto text-white'>
         <Navbar />
         <Hero />
-        <div ref={ref}>
-          <LightSpeed key={inView ? 'inView' : 'notInView'} left={true} duration={2500}>
+       
             <About />
-          </LightSpeed>
-        </div>
+         
         <Education />
         <Skills />
         <Projects />
+        <Certifications/>
         <Achievements />
         <div ref={ref}>
         <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1000}>

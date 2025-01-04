@@ -1,7 +1,13 @@
 import React from 'react'
+import { LightSpeed,Pop } from "react-swift-reveal";
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+
   return (
+    <div ref={ref}>
+          <Pop key={inView ? 'inView' : 'notInView'} left={true} duration={2500} distance='50px'>
     <div>
     <div className='flex flex-col justify-center items-center'>
       <h1 className="text-center text-4xl">About <span className='text-[#5eead4] font-bold'> Me</span></h1>
@@ -9,9 +15,11 @@ const About = () => {
         <p className='text-center max-w-xl text-lg'>I am a passionate and proficient full-stack developer with a strong focus on front-end development. Skilled in major programming languages, I am highly motivated in problem-solving and continuously expanding my expertise through full-stack projects.</p>
       </div>
     </div>
-      <div className='flex justify-center mt-10 mb-20'>
+      <div className='flex justify-center mt-20 mb-32'>
            <hr className='border-[#353d3c] w-3/4'/>
       </div>
+    </div>
+     </Pop>
     </div>
   )
 }

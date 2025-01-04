@@ -30,7 +30,7 @@ const Skills = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   return (
     <div>
-      <div className='flex justify-center mt-16 mb-20'>
+      <div className='flex justify-center mt-20 mb-32'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
       <div ref={ref}>
@@ -50,7 +50,7 @@ const Skills = () => {
         </div>
       </div>
       </Fade></div>
-      <div className='flex justify-center mt-20 mb-20'>
+      <div className='flex justify-center mt-32 mb-32'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
     </div>

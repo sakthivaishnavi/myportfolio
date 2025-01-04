@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Slide,Pulse } from "react-swift-reveal";
+import { Fade,Slide,Pulse } from "react-swift-reveal";
 
 const Education = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
@@ -26,7 +26,7 @@ const Education = () => {
             </div>
             <div className="flex flex-col justify-center items-center mt-4">
               <h1 className="text-xl md:text-lg font-bold">
-                CGPA - <span className="text-[#5eead4] font-bold">8.49</span>
+                CGPA - <span className="text-[#5eead4] font-bold">8.49*</span>
               </h1>
               <p className='text-gray-400'>(till 4th semester)</p>
             </div>
@@ -37,7 +37,7 @@ const Education = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* HSE */}
             <div ref={ref} className="hover:scale-110 transition-transform duration-500 ease-in-out delay-100">
-            <Slide key={inView ? 'inView' : 'notInView'} left={true} duration={1500}>
+            <Fade key={inView ? 'inView' : 'notInView'} left={true} duration={1500}>
             <div className="flex justify-between gap-8 bg-gray-900 p-10 rounded-xl w-full">
               <div className="flex flex-col items-start">
                 <h1 className="text-xl font-bold">Vikas Vidyalaya Matric. Hr. Sec. School</h1>
@@ -47,11 +47,11 @@ const Education = () => {
               <div className="flex flex-col justify-center items-start mt-3">
                 <h1 className="text-xl text-[#5eead4] font-bold">91.33%</h1>
               </div>
-            </div></Slide></div>
+            </div></Fade></div>
 
             {/* SSLC */}
             <div ref={ref} className="hover:scale-110 transition-transform duration-500 ease-in-out delay-100">
-            <Slide key={inView ? 'inView' : 'notInView'} right={true} duration={1500}>
+            <Fade key={inView ? 'inView' : 'notInView'} right={true} duration={1500}>
             <div className="flex justify-between gap-8 bg-gray-900 p-10 rounded-xl w-full">
               <div className="flex flex-col items-start">
                 <h1 className="text-xl font-bold">St. Joseph's<br/> Matric. Hr. Sec. School</h1>
@@ -62,7 +62,7 @@ const Education = () => {
                 <h1 className="text-xl text-[#5eead4] font-bold">94.2%</h1>
               </div>
             </div>
-            </Slide></div>
+            </Fade></div>
           </div>
         </div>
        
