@@ -199,7 +199,21 @@ const Projects = () => {
             </div>
           </div>
         </Slide></div>
-
+        <div ref={ref}>
+          <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500}>
+        <div className='flex gap-4 mt-14 justify-center items-center'>
+        <a href='https://github.com/sakthivaishnavi'>
+        <div className='bg-[#5eead4] text-gray-950 p-2 hover:bg-gray-950 hover:text-[#5eead4] hover:shadow-[#5eead4] shadow-md shadow-gray-950 hover:scale-100 transition-all ease-in-out rounded-xl mt-4 w-52 flex gap-4 justify-center items-center'>
+        <div>
+        <button>Show more projects</button>
+        </div>
+        <div>
+        <FaArrowCircleRight/>
+        </div>
+      </div>
+      </a>
+      </div>
+      </Fade></div>
       <div className='flex justify-center mt-24 mb-32'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
