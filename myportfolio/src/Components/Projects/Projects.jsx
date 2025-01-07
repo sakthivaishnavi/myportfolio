@@ -129,7 +129,7 @@ const Projects = () => {
         </Slide></div>
 
       <div ref={ref}>
-        <Slide key={inView ? 'inView' : 'notInView'} right={true} duration={2500} distance={'100px'}>
+        <Slide key={inView ? 'inView' : 'notInView'} right={true} duration={2500} delay={500} distance={'100px'}>
           <div className="flex justify-center items-center">
             <div className='flex justify-center items-center ml-72 mr-72 mt-8 gap-8 '>
               <div className='text-wrap w-3/4 bg-gray-950 hover:bg-gray-900 hover:text-[#5eead4] hover:shadow-[#5eead4] hover:shadow-md p-5 rounded-3xl hover:scale-95 transition-all duration-300 ease-in-out'>

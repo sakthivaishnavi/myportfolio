@@ -1,6 +1,9 @@
+const flowbite = require("flowbite-react/tailwind");
+
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Adjust the path based on your file structure
+    flowbite.content(),
   ],
   theme: {
     extend: {
@@ -15,5 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    flowbite.plugin(),
+  ],
 };
