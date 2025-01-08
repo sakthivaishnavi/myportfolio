@@ -2,62 +2,37 @@ import React from "react";
 import { Carousel } from "flowbite-react";
 import jp from "../../assets/JP_Morgan_excel.pdf";
 import jp_img from "../../assets/jp.png";
+import { useInView } from 'react-intersection-observer';
+import { Fade,Slide,Pulse } from "react-swift-reveal";
 
 const Certifications = () => {
+    const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+  
   return (
-    <div className="flex flex-col justify-center items-center content-center">
-      <h1 className="text-center text-4xl mb-8">Certifications</h1>
-      <div className="w-[28rem] hover:shadow-2xl hover:shadow-[#5eead4] rounded-xl relative">
-        <Carousel
-          className="w-full h-64"
-          slideInterval={8000}
-          pauseOnHover={true}
-          indicators={true} // Enable indicators
-        >
-          {/* Slide 1 */}
-          <div className="bg-gray-950 hover:bg-gray-900 rounded-xl flex flex-col justify-center items-center p-6">
-            <a href={jp} className="text-center" aria-label="JP Morgan Excel Certification">
-              <img
-                src={jp_img}
-                alt="JP Morgan Excel Certification"
-                className="w-72 h-36 mb-4"
-              />
-              <p className="text-white text-lg">
-                JP Morgan Chase & Co
-                <br />
-                Excel Certification
-              </p>
-            </a>
-          </div>
-
-          {/* Slide 2 */}
-          <div className="bg-gray-950 hover:bg-gray-900 rounded-xl flex flex-col justify-center items-center p-6">
-            <a href={jp} className="text-center" aria-label="JP Morgan Excel Certification">
-              <img
-                src={jp_img}
-                alt="JP Morgan Excel Certification"
-                className="w-72 h-36 mb-4"
-              />
-              <p className="text-white text-lg">
-                JP Morgan Chase & Co
-                <br />
-                Excel Certification
-              </p>
-            </a>
-          </div>
-        </Carousel>
-
-        {/* Custom Styling to Adjust Indicators */}
-        <style>
-          {`
-          .carousel-indicators {
-            position: absolute;
-            bottom: -20px; /* Moves indicators below the slide */
-          }
-        `}
-        </style>
-      </div>
+    <div className="flex flex-col justify-center items-center">
+      <div ref={ref}>
+      <Slide key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
+      <h1 className="text-center text-4xl mb-24">Certifications</h1>
+      </Slide></div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-20 mr-20">
+    <div ref={ref}>
+    <Slide key={inView ? 'inView' : 'notInView'} left={true} duration={1500}>
+  <div className="group relative rounded-lg shadow-md hover:shadow-[#5eead4] transition-shadow">
+    <img src={jp_img} alt="JP Morgan" className="h-52 mx-auto group-hover:opacity-80 rounded-xl" />
+    <div className="absolute inset-0 bg-gray-950 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-center items-center">
+      <p className="text-[#5eead4] mb-2 font-bold text-lg">JP Morgan Chase & Co</p>
+      <p className="text-[#5eead4] text-sm">Excel Certification</p>
+      <a href={jp} className="text-black p-2 rounded-lg bg-[#5eead4] mt-4" >View Certificate</a>
     </div>
+  </div>
+  </Slide>
+  </div>
+
+</div>
+
+
+</div>
+
   );
 };
 

@@ -17,8 +17,10 @@ const Hero = () => {
               <div className='flex flex-col items-center'>
                 <div ref={ref} className='text-center'>
                   <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1000}>
+                    <div className='flex justify-center items-center gap-4'>
                     <div className="text-5xl font-bold text-white">Hi, I'm<span className="text-[#5eead4]"> Sakthi</span></div>
-                    {/* <img src={Hi} width={24} height={24}/> */}
+                    <img src={Hi} width={36} height={36}/>
+                    </div>
                     <div className="text-2xl text-white mt-4">Front-end Developer</div>
                   </Fade>
                 </div>
@@ -26,8 +28,7 @@ const Hero = () => {
                 <div ref={ref}>
                 <div className='mt-4 flex justify-center items-center gap-4'>
                 <Fade key={inView ? 'inView' : 'notInView'} right={true} duration={1000}>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sakthivaishnavi12@gmail.com"
-          target="_blank">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sakthivaishnavi12@gmail.com" target="_blank">
                     <BiLogoGmail className="text-4xl text-[#5eead4] cursor-pointer w-7" /></a>
                   <a href='https://www.linkedin.com/in/sakthivaishnavi/'>
                     <FaLinkedin className="text-[#5eead4] text-4xl cursor-pointer w-7" /></a>
