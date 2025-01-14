@@ -20,9 +20,7 @@ function App() {
       <div className='container mx-auto text-white'>
         <Navbar />
         <Hero />
-       
-            <About />
-         
+        <About />
         <Education />
         <Skills />
         <Projects />
