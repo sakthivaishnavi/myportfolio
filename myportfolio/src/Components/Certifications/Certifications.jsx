@@ -1,5 +1,4 @@
 import React from "react";
-import { Carousel } from "flowbite-react";
 import jp from "../../assets/JP_Morgan_excel.pdf";
 import ml from "../../assets/ML_intern_certificate.pdf";
 import jp_img from "../../assets/jp.png";
