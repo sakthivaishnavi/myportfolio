@@ -10,16 +10,13 @@ const Footer = () => {
   return (
     <div className='flex justify-center items-center bg-gray-950 mt-8 h-12 text-[#5eead4] gap-2'>
       <div className='flex justify-center items-center gap-2'>
-        <div>
-        <h1>Copyrights reserved</h1>
-        </div>
-        <div>
-        <LiaCopyrightSolid />
+        <div className='flex flex-row items-center gap-1'>
+        <h1>Copyright</h1><LiaCopyrightSolid /> 2025
         </div>
       </div>
       <div className='flex justify-center items-center gap-2'>
         <div>
-          <h1> | | </h1>
+          <h1> | </h1>
         </div>
         <div>
         <h1>Made with 💙 and React</h1>
