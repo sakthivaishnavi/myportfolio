@@ -94,7 +94,7 @@ const Projects = () => {
                   <p className="text-gray-300 mb-8 text-justify">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-4 justify-center mb-8">
                     {project.techStack.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-800 px-4 py-1 rounded-xl text-[#2dc1ab]">
@@ -102,9 +102,9 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex justify-center items-center gap-6">
-                    <a 
+                    <a
                       href={project.liveLink}
                       target="_blank"
                       rel="noreferrer"
@@ -113,7 +113,7 @@ const Projects = () => {
                       Check it out
                       <FaArrowCircleRight />
                     </a>
-                    <a 
+                    <a
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
@@ -144,14 +144,16 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="flex justify-center mt-36">
-        <a 
+      <div ref={ref} className="flex justify-center mt-36">
+        <Fade key={inView ? 'inView' : 'notInView'} right={true} duration={1500}>
+        <a
           href="https://github.com/sakthivaishnavi"
           className="bg-[#5eead4] text-gray-950 px-6 py-3 rounded-full hover:bg-gray-950 hover:text-[#5eead4] hover:shadow-[#5eead4] shadow-md transition-all duration-300 flex items-center gap-2"
         >
           Show more projects
           <FaArrowCircleRight />
         </a>
+        </Fade>
       </div>
 
       <div className='flex justify-center mt-32 mb-14'>
