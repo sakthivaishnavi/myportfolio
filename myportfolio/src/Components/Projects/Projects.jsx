@@ -91,11 +91,11 @@ const Projects = () => {
                   <h2 className="text-2xl font-bold text-center mb-6 text-[#5eead4]">
                     {project.title}
                   </h2>
-                  <p className="text-gray-300 mb-8 text-justify">
+                  <p className="text-gray-300 mb-8 text-justify ">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-4 justify-center mb-8">
+                  <div className="flex flex-wrap gap-4 justify-center mb-8 ">
                     {project.techStack.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-800 px-4 py-1 rounded-xl text-[#2dc1ab]">
                         {tech}

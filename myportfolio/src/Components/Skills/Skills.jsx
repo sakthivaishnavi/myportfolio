@@ -38,9 +38,9 @@ const Skills = () => {
       <h1 className='text-4xl mb-16 text-center'>My Skillsets</h1>
       </Fade></div>
       <div ref={ref}>
-      <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500} distance='50%'>
+      <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500} distance='20%'>
       <div className='flex flex-col items-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-14'>
+        <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-14'>
           {skills.map((skill, index) => (
             <div key={index} className={skillStyles}>
               <h1 className='text-7xl ml-3 font-bold'>{skill.icon}</h1>
