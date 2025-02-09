@@ -1,56 +1,61 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import "./navbar.css";
-import { Fade } from 'react-swift-reveal';
-import { useInView } from 'react-intersection-observer';
+import { Fade } from "react-swift-reveal";
+import { useInView } from "react-intersection-observer";
 
 const Navbar = () => {
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleDropDown = () => {
-    setIsDropDownVisible(!isDropDownVisible);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
-  const hoverEffect = {
-    scale: 1.2,
-    color: "aqua",
-    transition: { duration: 0.3 },
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
   };
-    const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
-  
 
   return (
     <div id="navbar" className="flex items-center justify-center pt-3 mt-4">
-       <div ref={ref}>
-        <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
-      <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
-        <motion.a href="#home" className="link" whileHover={hoverEffect}>Home</motion.a>
-        <motion.a href="#about" className="link" whileHover={hoverEffect}>About</motion.a>
-        <motion.a href="#skills" className="link" whileHover={hoverEffect}>Skills</motion.a>
-        <motion.a href="#projects" className="link" whileHover={hoverEffect}>Projects</motion.a>
-        <motion.a href="#achievements" className="link" whileHover={hoverEffect}>Accomplishments</motion.a>
-        <motion.a href="#contact" className="link" whileHover={hoverEffect}>Contact</motion.a>
-      </div>
-      </Fade>
+      <div ref={ref}>
+        <Fade key={inView ? "inView" : "notInView"} top={true} duration={1500}>
+          <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
+            <a onClick={(e) => handleScroll(e, "home")} className="link">Home</a>
+            <a onClick={(e) => handleScroll(e, "about")} className="link">About</a>
+            <a onClick={(e) => handleScroll(e, "skills")} className="link">Skills</a>
+            <a onClick={(e) => handleScroll(e, "projects")} className="link">Projects</a>
+            <a onClick={(e) => handleScroll(e, "achievements")} className="link">Accomplishments</a>
+            <a onClick={(e) => handleScroll(e, "contact")} className="link">Contact</a>
+          </div>
+        </Fade>
       </div>
 
+      {/* Burger Menu / Close Button */}
       <div className="lg:hidden">
-      <input type="checkbox" onClick={handleDropDown} id="burger-toggle" className={`${isDropDownVisible ? "hidden" : "visible mt-3"}`}/>
-      <label htmlFor="burger-toggle" className="burger-menu">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </label>
+        <button onClick={toggleMenu} className="menu-button">
+          {isMenuOpen ? (
+            <span className="close-icon">&#10005;</span> // Close (X) icon
+          ) : (
+            <div className="burger-menu">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
+          )}
+        </button>
       </div>
-      
-      {isDropDownVisible && (
+
+      {isMenuOpen && (
         <div className="mob-nav grid grid-cols-1 absolute bg-gray-900 lg:hidden">
-          <motion.a href="#home" className="navs">Home</motion.a>
-          <motion.a href="#about" className="navs">About</motion.a>
-          <motion.a href="#skills" className="navs">Skills</motion.a>
-          <motion.a href="#projects" className="navs">Projects</motion.a>
-          <motion.a href="#achievements" className="navs">Accomplishments</motion.a>
-          <motion.a href="#contact" className="navs">Contact</motion.a>
+          <a onClick={(e) => handleScroll(e, "home")} className="navs">Home</a>
+          <a onClick={(e) => handleScroll(e, "about")} className="navs">About</a>
+          <a onClick={(e) => handleScroll(e, "skills")} className="navs">Skills</a>
+          <a onClick={(e) => handleScroll(e, "projects")} className="navs">Projects</a>
+          <a onClick={(e) => handleScroll(e, "achievements")} className="navs">Accomplishments</a>
+          <a onClick={(e) => handleScroll(e, "contact")} className="navs">Contact</a>
         </div>
       )}
     </div>
