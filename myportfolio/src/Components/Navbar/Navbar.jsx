@@ -25,6 +25,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
             <a onClick={(e) => handleScroll(e, "home")} className="link">Home</a>
             <a onClick={(e) => handleScroll(e, "about")} className="link">About</a>
+            <a onClick={(e) => handleScroll(e, "education")} className="link">Education</a>
             <a onClick={(e) => handleScroll(e, "skills")} className="link">Skills</a>
             <a onClick={(e) => handleScroll(e, "projects")} className="link">Projects</a>
             <a onClick={(e) => handleScroll(e, "achievements")} className="link">Accomplishments</a>
@@ -52,6 +53,7 @@ const Navbar = () => {
         <div className="mob-nav grid grid-cols-1 absolute bg-gray-900 lg:hidden">
           <a onClick={(e) => handleScroll(e, "home")} className="navs">Home</a>
           <a onClick={(e) => handleScroll(e, "about")} className="navs">About</a>
+          <a onClick={(e) => handleScroll(e, "education")} className="navs">Education</a>
           <a onClick={(e) => handleScroll(e, "skills")} className="navs">Skills</a>
           <a onClick={(e) => handleScroll(e, "projects")} className="navs">Projects</a>
           <a onClick={(e) => handleScroll(e, "achievements")} className="navs">Accomplishments</a>
