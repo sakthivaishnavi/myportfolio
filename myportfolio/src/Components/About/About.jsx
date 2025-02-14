@@ -16,7 +16,7 @@ const About = () => {
     <div className='flex flex-col justify-center items-center'>
       <h1 className="text-center text-4xl">About <span className='text-[#5eead4] font-bold'> Me</span></h1>
       <div className='my-8 flex justify-center lg:justify-start '>
-        <p className='text-center sm:max-w-xl text-lg sm:text-xl  max-w-sm'>I am a passionate and proficient full-stack developer with a strong focus on front-end development. Skilled in major programming languages, I am highly motivated in problem-solving and continuously expanding my expertise through full-stack projects.</p>
+        <p className='text-center sm:max-w-xl text-md sm:text-xl  max-w-sm'>I am a passionate and proficient full-stack developer with a strong focus on front-end development. Skilled in major programming languages, I am highly motivated in problem-solving and continuously expanding my expertise through full-stack projects.</p>
       </div>
     </div>
       <div className='flex justify-center mt-32 mb-40'>
