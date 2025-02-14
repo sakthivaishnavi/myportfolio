@@ -19,26 +19,19 @@ const Navbar = () => {
   };
 
   return (
-    <div id="navbar" className="flex items-center justify-center pt-3 mt-4">
-      <div ref={ref}>
-        <Fade key={inView ? "inView" : "notInView"} top={true} duration={1500}>
-          <div className="hidden lg:flex items-center justify-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
-            <a onClick={(e) => handleScroll(e, "home")} className="link">Home</a>
-            <a onClick={(e) => handleScroll(e, "about")} className="link">About</a>
-            <a onClick={(e) => handleScroll(e, "education")} className="link">Education</a>
-            <a onClick={(e) => handleScroll(e, "skills")} className="link">Skills</a>
-            <a onClick={(e) => handleScroll(e, "projects")} className="link">Projects</a>
-            <a onClick={(e) => handleScroll(e, "achievements")} className="link">Accomplishments</a>
-            <a onClick={(e) => handleScroll(e, "contact")} className="link">Contact</a>
-          </div>
-        </Fade>
-      </div>
+    <nav id="navbar" className="fixed top-0 left-0 w-full  bg-stone-950 z-50">
+      <div className="flex items-center justify-between px-80 ">
+        <div ref={ref} className="hidden lg:flex items-center gap-9 text-xl font-medium text-gray-400 cursor-pointer w-full">
+          <Fade key={inView ? "inView" : "notInView"} top={true} duration={1500}>
+            {["home", "about", "education", "skills", "projects", "achievements", "contact"].map((section) => (
+              <a key={section} onClick={(e) => handleScroll(e, section)} className="link">{section.charAt(0).toUpperCase() + section.slice(1)}</a>
+            ))}
+          </Fade>
+        </div>
 
-      {/* Burger Menu / Close Button */}
-      <div className="lg:hidden">
-        <button onClick={toggleMenu} className="menu-button">
+        <button onClick={toggleMenu} className="lg:hidden focus:outline-none z-50">
           {isMenuOpen ? (
-            <span className="close-icon">&#10005;</span> // Close (X) icon
+            <span className="close-icon text-[#5eead4] text-2xl font-bold">&#10005;</span> // Close (X) icon
           ) : (
             <div className="burger-menu">
               <div className="line"></div>
@@ -50,17 +43,13 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="mob-nav grid grid-cols-1 absolute bg-gray-900 lg:hidden">
-          <a onClick={(e) => handleScroll(e, "home")} className="navs">Home</a>
-          <a onClick={(e) => handleScroll(e, "about")} className="navs">About</a>
-          <a onClick={(e) => handleScroll(e, "education")} className="navs">Education</a>
-          <a onClick={(e) => handleScroll(e, "skills")} className="navs">Skills</a>
-          <a onClick={(e) => handleScroll(e, "projects")} className="navs">Projects</a>
-          <a onClick={(e) => handleScroll(e, "achievements")} className="navs">Accomplishments</a>
-          <a onClick={(e) => handleScroll(e, "contact")} className="navs">Contact</a>
+        <div className="mob-nav flex flex-col items-center absolute top-full right-0 w-full lg:hidden">
+          {["home", "about", "education", "skills", "projects", "achievements", "contact"].map((section) => (
+            <a key={section} onClick={(e) => handleScroll(e, section)} className="navs">{section.charAt(0).toUpperCase() + section.slice(1)}</a>
+          ))}
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

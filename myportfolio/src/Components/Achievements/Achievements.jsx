@@ -11,7 +11,7 @@ const Achievements = () => {
       </div>
       <div ref={ref}>
         <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
-      <h1 className='text-4xl text-center'>Accomplishments</h1>
+      <h1 className='text-4xl text-center'>Achievements</h1>
       </Fade>
       </div>
       <div ref={ref} className='flex justify-center'>

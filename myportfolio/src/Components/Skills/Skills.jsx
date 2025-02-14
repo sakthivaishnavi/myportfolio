@@ -9,7 +9,8 @@ import { FaC } from "react-icons/fa6";
 import { Fade } from 'react-swift-reveal';
 import { useInView } from 'react-intersection-observer';
 
-const skillStyles = ' hover:bg-[#5eead4] bg-gray-900 text-[#5eead4]  hover:text-gray-900 p-4 rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
+// Skills Component
+const skillStyles = 'hover:bg-[#5eead4] bg-gray-900 text-[#5eead4] hover:text-gray-900 p-3 sm:p-4 rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
 
 const skills = [
   { icon: <RiReactjsFill />, name: 'React' },
@@ -26,31 +27,37 @@ const skills = [
   { icon: <IoLogoFigma />, name: 'Figma' },
 ];
 
-const Skills = () => {
+export const Skills = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
+  
   return (
-    <div>
-      <div className='flex justify-center mt-20 mb-32'>
+    <div className="w-full px-4 sm:px-6 md:px-8">
+      <div className='flex justify-center mt-16 sm:mt-24 md:mt-32 mb-24 sm:mb-32 md:mb-48'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
+      
       <div ref={ref}>
-      <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
-      <h1 className='text-4xl mb-16 text-center'>My Skillsets</h1>
-      </Fade></div>
-      <div ref={ref}>
-      <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500} distance='20%'>
-      <div className='flex flex-col items-center'>
-        <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-14'>
-          {skills.map((skill, index) => (
-            <div key={index} className={skillStyles}>
-              <h1 className='text-7xl ml-3 font-bold'>{skill.icon}</h1>
-              <p className='mt-2 text-center'>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+        <Fade key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
+          <h1 className='text-3xl sm:text-4xl mb-12 sm:mb-16 text-center'>My Skillsets</h1>
+        </Fade>
       </div>
-      </Fade></div>
-      <div className='flex justify-center mt-32 mb-16'>
+      
+      <div ref={ref}>
+        <Fade key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500} distance='20%'>
+          <div className='flex flex-col items-center'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 lg:gap-14 max-w-6xl mx-auto'>
+              {skills.map((skill, index) => (
+                <div key={index} className={skillStyles}>
+                  <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl ml-6 sm:ml-3 font-bold'>{skill.icon}</h1>
+                  <p className='mt-2 text-center text-sm sm:text-base'>{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Fade>
+      </div>
+      
+      <div className='flex justify-center mt-24 sm:mt-32 md:mt-48 mb-8 sm:mb-12 md:mb-16'>
         <hr className='border-[#353d3c] w-3/4' />
       </div>
     </div>

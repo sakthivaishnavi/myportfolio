@@ -1,33 +1,39 @@
-import React from 'react'
-import { IoIosMail } from "react-icons/io";
-import { FaWhatsapp } from "react-icons/fa";
-
+import React from 'react';
+import { IoIosMail } from 'react-icons/io';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   return (
-    <div>
-          <div className='flex flex-row justify-center items-center gap-12'>
-          <div className='flex flex-row gap-4 hover:border-b-2 hover:border-[#5eead4]  p-2 rounded-xl text-[#5eead4] hover:text-white hover:transition ease-in-out duration-500 hover:scale-110'> 
-          <div className='text-2xl'>
+    <div className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-12 p-6">
+      {/* Email Contact */}
+      <div className="flex items-center gap-3 md:gap-4 hover:border-b-4 hover:border-[#5eead4] p-3 rounded-xl text-[#5eead4] hover:text-white transition ease-in-out duration-500 hover:scale-110">
+        <div className="text-2xl md:text-3xl">
           <IoIosMail />
-          </div>
-          <div>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sakthivaishnavi12@gmail.com"
-          target="_blank">sakthivaishnavi12@gmail.com</a>
-          </div>
-          </div>
+        </div>
+        <div className="text-md md:text-lg">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sakthivaishnavi12@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            sakthivaishnavi12@gmail.com
+          </a>
+        </div>
+      </div>
 
-          <div className='flex flex-row gap-4 hover:border-b-2 hover:border-[#5eead4]  p-2 rounded-xl text-[#5eead4] hover:text-white hover:transition ease-in-out duration-500 hover:scale-110'> 
-          <div className='text-2xl'>
+      {/* WhatsApp Contact */}
+      <div className="flex items-center gap-3 md:gap-4 hover:border-b-4 hover:border-[#5eead4] p-3 rounded-xl text-[#5eead4] hover:text-white transition ease-in-out duration-500 hover:scale-110">
+        <div className="text-2xl md:text-3xl">
           <FaWhatsapp />
-          </div>
-          <div>
-            <a href="https://wa.me/919363440587" target="_blank" rel="noopener noreferrer">9363440587</a>
-          </div>
-          </div>
-          </div>
+        </div>
+        <div className="text-md md:text-lg">
+          <a href="https://wa.me/919363440587" target="_blank" rel="noopener noreferrer">
+            9363440587
+          </a>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

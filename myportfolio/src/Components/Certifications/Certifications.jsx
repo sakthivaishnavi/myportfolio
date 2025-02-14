@@ -25,19 +25,17 @@ const Certifications = () => {
     <div className="absolute inset-0 bg-gray-950 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-center items-center">    
     <p className="text-[#5eead4] mb-2 font-bold text-lg text-center">MongoDB Associate Developer</p>
     <p className="text-[#5eead4] text-sm">Nodejs</p>
-      <a href={mongo} className="text-black p-2 rounded-lg bg-[#5eead4] mt-4" >View Certificate</a>
     </div>
   </div>
   </Slide>
   </div>
     <div ref={ref}>
-    <Slide key={inView ? 'inView' : 'notInView'} left={true} duration={1500}>
+    <Slide key={inView ? 'inView' : 'notInView'} bottom={true} duration={1500} distance="50%">
   <div className="group relative rounded-lg shadow-md hover:shadow-[#5eead4] transition-shadow">
     <img src={jp_img} alt="JP Morgan" className="h-52 mx-auto group-hover:opacity-80 rounded-xl" />
     <div className="absolute inset-0 bg-gray-950 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-center items-center">
-      <p className="text-[#5eead4] mb-2 font-bold text-lg">JP Morgan Chase & Co</p>
+      <p className="text-[#5eead4] mb-2 font-bold text-lg text-center">JP Morgan Chase & Co</p>
       <p className="text-[#5eead4] text-sm">Excel Certification</p>
-      <a href={jp} className="text-black p-2 rounded-lg bg-[#5eead4] mt-4" >View Certificate</a>
     </div>
   </div>
   </Slide>
@@ -49,7 +47,6 @@ const Certifications = () => {
     <div className="absolute inset-0 bg-gray-950 bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-center items-center">
       <p className="text-[#5eead4] mb-2 font-bold text-lg text-center">Generative AI consortium, SystimaNX IT Solutions</p>
       {/* <p className="text-[#5eead4] text-sm"></p> */}
-      <a href={ml} className="text-black p-2 rounded-lg bg-[#5eead4] mt-4" >View Certificate</a>
     </div>
   </div>
   </Slide>
