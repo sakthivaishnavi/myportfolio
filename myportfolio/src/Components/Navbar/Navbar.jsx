@@ -28,7 +28,7 @@ const Navbar = () => {
   
 
   return (
-    <nav id="navbar" className="fixed top-0 left-0 w-full  bg-stone-950 z-50">
+    <nav id="navbar" className="fixed top-0 left-0 w-full bg-stone-950 z-50">
       <div className="flex items-center justify-between px-80 ">
         <div ref={ref} className="hidden lg:flex items-center gap-8 text-xl font-medium text-gray-400 cursor-pointer w-full">
           <Fade key={inView ? "inView" : "notInView"} top={true} duration={1500}>

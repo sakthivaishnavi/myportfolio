@@ -24,7 +24,7 @@ export const Education = () => {
                     <p>CSE</p>
                     <p className="text-gray-400">2022 - Present</p>
                   </div>
-                  <div className="flex sm:flex-col justify-items-start flex-row sm:justify-center sm:items-start items-center mt-2 sm:mt-4">
+                  <div className="flex sm:flex-col justify-items-start flex-row sm:justify-center sm:items-start items-center mt-2 sm:mt-4 gap-2">
                     <h1 className="text-lg sm:text-xl font-bold">
                       CGPA - <span className="text-[#5eead4] font-bold">8.49*</span>
                     </h1>
