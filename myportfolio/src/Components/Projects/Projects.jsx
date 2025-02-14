@@ -123,7 +123,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Navigation buttons - Now closer to the card */}
               <div className="flex justify-center gap-4 mt-6">
                 <button
                   onClick={previous}
@@ -145,7 +144,6 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Show More Projects button - Properly spaced */}
       <div className="flex justify-center mt-12">
         <a
           href="https://github.com/sakthivaishnavi"
@@ -161,7 +159,7 @@ const Projects = () => {
         </a>
       </div>
 
-      <div className="flex justify-center mt-12">
+      <div className="flex justify-center mt-28 mb-20">
         <hr className="border-gray-800 w-3/4" />
       </div>
     </section>

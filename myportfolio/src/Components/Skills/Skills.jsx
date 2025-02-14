@@ -9,7 +9,6 @@ import { FaC } from "react-icons/fa6";
 import { Fade } from 'react-swift-reveal';
 import { useInView } from 'react-intersection-observer';
 
-// Skills Component
 const skillStyles = 'hover:bg-[#5eead4] bg-gray-900 text-[#5eead4] hover:text-gray-900 p-3 sm:p-4 rounded-xl hover:scale-110 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out';
 
 const skills = [

@@ -4,9 +4,56 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: 50;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 1001;
 	padding: 1rem 0;
-  }
+	display: flex;
+	justify-content: center; /* Centering the navbar */
+	align-items: center;
+}
+
+/* Burger Menu */
+.burger-menu {
+	position: absolute; /* Keep it fixed at the top-right */
+	top: 1rem;
+	right: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+	z-index: 1100;
+}
+
+.burger-menu .line {
+	width: 25px;
+	height: 3px;
+	background: #5eead4;
+	border-radius: 3px;
+	transition: all 0.3s ease-in-out;
+}
+
+.mob-nav {
+	position: fixed;
+	top: 5rem;
+	right: 2rem;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 1200;
+	width: 40%;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	animation: fadeIn 0.5s ease-in forwards;
+}
+
+
+
+
+
+
+
   
   /* Desktop Links */
   .link {
@@ -33,38 +80,6 @@
 	transform: scaleX(1);
   }
   
-  /* Burger Menu */
-  .burger-menu {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	cursor: pointer;
-  }
-  
-  .burger-menu .line {
-	width: 25px;
-	height: 3px;
-	background: #5eead4;
-	border-radius: 3px;
-	transition: all 0.3s ease-in-out;
-  }
-  
-  /* Mobile Navigation */
-  .mob-nav {
-	position: fixed; /* Change from absolute to fixed */
-	top: 5rem;
-	right: 2rem;
-	background-color: rgba(0, 0, 0, 0.9);
-	z-index: 1000; /* Ensure it stays above other content */
-	width: 40%;
-	border-radius: 0.5rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-size: 1rem;
-	animation: fade 0.5s ease-in forwards;
-}
 
   
   .mob-nav a {

@@ -12,8 +12,8 @@ const Certifications = () => {
     const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
   
   return (
-    <div className="flex flex-col justify-center items-center">
-      <div ref={ref}>
+<div className="flex flex-col justify-center items-center mt-0 pt-0">
+<div ref={ref}>
       <Slide key={inView ? 'inView' : 'notInView'} top={true} duration={1500}>
       <h1 className="text-center text-4xl mb-24">Certifications & Internships</h1>
       </Slide></div>

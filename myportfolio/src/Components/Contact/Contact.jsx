@@ -5,7 +5,6 @@ import { FaWhatsapp } from 'react-icons/fa';
 const Contact = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-1 md:gap-12 p-6">
-      {/* Email Contact */}
       <div className="flex items-center gap-3 md:gap-4 hover:border-b-4 hover:border-[#5eead4] p-3 rounded-xl text-[#5eead4] hover:text-white transition ease-in-out duration-500 hover:scale-110">
         <div className="text-2xl md:text-3xl">
           <IoIosMail />
@@ -21,7 +20,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* WhatsApp Contact */}
       <div className="flex items-center gap-3 md:gap-4 hover:border-b-4 hover:border-[#5eead4] p-3 rounded-xl text-[#5eead4] hover:text-white transition ease-in-out duration-500 hover:scale-110">
         <div className="text-2xl md:text-3xl">
           <FaWhatsapp />
